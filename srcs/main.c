@@ -6,14 +6,14 @@
 /*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:41:49 by myokono           #+#    #+#             */
-/*   Updated: 2024/09/03 14:49:01 by myokono          ###   ########.fr       */
+/*   Updated: 2024/09/03 18:55:21 by myokono          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/minishell.h"
 
 // エラーメッセージの表示関数
-int	error_msg (char *cmd, char *msg, int status)
+int	ft_error_msg (char *cmd, char *msg, int status)
 {
 	ft_putstr_fd("minishell: ", 2);
 	ft_putstr_fd(cmd, 2);
@@ -23,7 +23,7 @@ int	error_msg (char *cmd, char *msg, int status)
 }
 
 // エグジット関数（アレンジ）
-void	free_and_exit (t_copy *copy)
+void	ft_exit (t_copy *copy)
 {
 	free_cmdarg(copy);
 	if (g_envs)
@@ -44,14 +44,14 @@ int	main (int argc, char **argv, char **env)
 	if (argc > 1 && ft_strncmp(argv[1], "-c", 3) == 0)
 	{
 		if (argv[2])
-			shell(argv[2], 0);
+			ft_minishell(argv[2], 0);
 		else if (argc == 2)
-			error_msg (argv[1], ": option requires an argument", 2);
+			ft_error_msg (argv[1], ": option requires an argument", 2);
 	}
 	else if (argc > 1)
-		error_msg(argv[1], ": No such file or directory", 127);
+		ft_error_msg(argv[1], ": No such file or directory", 127);
 	else
-		shell(NULL, 1);
+		ft_minishell(NULL, 1);
 
 	return (0);
 }

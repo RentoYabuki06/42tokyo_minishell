@@ -6,11 +6,11 @@
 /*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 10:29:48 by myokono           #+#    #+#             */
-/*   Updated: 2024/09/03 12:16:22 by myokono          ###   ########.fr       */
+/*   Updated: 2024/09/03 17:49:56 by myokono          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
 // 子プロセスが存在している時の処理
 static void	child_process(int sign_num)

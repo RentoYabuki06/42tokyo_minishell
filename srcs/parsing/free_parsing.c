@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_parsing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
+/*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 15:03:04 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/03 15:10:41 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/03 19:01:22 by myokono          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_free_cmdarg(t_copy *copy)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!copy)
