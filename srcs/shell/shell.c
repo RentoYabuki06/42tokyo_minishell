@@ -6,13 +6,13 @@
 /*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 21:23:25 by myokono           #+#    #+#             */
-/*   Updated: 2024/09/03 15:33:47 by myokono          ###   ########.fr       */
+/*   Updated: 2024/09/03 18:55:43 by myokono          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
-static void	init (t_copy *cmdline)
+static void	ft_init (t_copy *cmdline)
 {
 	char	*tmp;
 	size_t	shlvl;
@@ -22,7 +22,7 @@ static void	init (t_copy *cmdline)
 	shlvl = (ft_atoi(tmp) + 1);
 	free(tmp);
 	tmp = ft_itoa(shlvl);
-	set_env("SHLVL", tmp);
+	ft_set_env("SHLVL", tmp);
 	free(tmp);
 	prompt();
 	g_pid = 0;
@@ -60,12 +60,12 @@ int	check_line (char	*line)
 	return (1);
 }
 
-void	shell(char *line, int interactive)
+void	ft_minishell(char *line, int interactive)
 {
 	t_copy	cmdline;
 
 	setup_signal_handlers();
-	init(&cmdline);
+	ft_init(&cmdline);
 	while (1)
 	{
 		if (interactive)
