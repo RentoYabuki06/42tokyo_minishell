@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:20:58 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/02 14:25:33 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/03 19:09:40 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,13 @@ typedef struct			s_copy
 
 void					loop(void);
 void					loop_tester(char *line);
+void					ft_free_cmdarg(t_copy *copy);
+void					ft_free_pipe(t_pip *pip);
+void					ft_free_list(t_sep *list);
+t_pip					*ft_new_pipe(char *cmd);
+int						ft_index_pipe(char *str);
+void					ft_make_parse(t_sep *list);
+char 					*ft_main_parsing(char *whole_cmd, t_copy *copy);
+int						ft_quote_error(char c);
 
 #endif
