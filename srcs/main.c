@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:41:49 by myokono           #+#    #+#             */
-/*   Updated: 2024/09/03 18:55:21 by myokono          ###   ########.fr       */
+/*   Updated: 2024/09/04 07:47:54 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	ft_exit (t_copy *copy)
 		free_list(copy->list);
 	if (copy->cmdssep)
 		free(copy->cmdssep);
+	if (!g_tester)
+		ft_putstr_fd("exit\n", 2);
 	exit(g_status);
 }
 
