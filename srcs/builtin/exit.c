@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 19:37:14 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/04 08:46:57 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 07:58:58 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ static int	ft_sign(const char *str, int *sign)
 	return (i);
 }
 
-int	ft_exit_atoi(const char *str)
+// 本家のexitコマンドはint型以上でも入力できるので、後から修正が必要かも
+static int	ft_exit_atoi(const char *str)
 {
 	int			i;
 	int			sign;
