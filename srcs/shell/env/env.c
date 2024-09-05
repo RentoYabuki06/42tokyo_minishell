@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myokono <myokono@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:49:30 by myokono           #+#    #+#             */
-/*   Updated: 2024/09/03 19:12:46 by myokono          ###   ########.fr       */
+/*   Updated: 2024/09/05 09:34:23 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	**ft_realloc_envs(size_t size)
 	return (new);
 }
 
-ssize_t find_env(char *env)
+ssize_t ft_find_env(char *env)
 {
 	char	*sub;
 	ssize_t i;
