@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 14:20:58 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/03 19:09:40 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 09:26:54 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,7 @@ int						ft_index_pipe(char *str);
 void					ft_make_parse(t_sep *list);
 char 					*ft_main_parsing(char *whole_cmd, t_copy *copy);
 int						ft_quote_error(char c);
+int						ft_strchr_index(const char *s, int c);
+char					*ft_strjoin_minishell(char const *s1, char const *s2, char const *s3, char const *s4);
 
 #endif
