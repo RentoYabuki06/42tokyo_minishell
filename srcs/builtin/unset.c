@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 19:37:20 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/05 09:36:26 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 13:27:25 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 
 static char	**ft_remove_env(size_t index)
 {
-	// ここに環境変数を削除する処理を書く
+	size_t	num_env;
+	char 	*tmp;
+
+	num_env = ft_envs_count(g_envs);
+	while (g_envs[index + 1])
+	{
+		tmp = ft_strdup(g_envs[index + 1]);
+		free(g_envs[index]);
+		g_envs[index] = tmp;
+		index++;
+	}
+	return (ft_realloc_envs(num_env - 1));
 }
 
 int	ft_run_unset(char **args)
@@ -28,11 +39,11 @@ int	ft_run_unset(char **args)
 	i = 0;
 	while (args[++i])
 	{
-		index = find_env(args[i]);
+		index = ft_find_env(args[i]);
 		if (index != -1)
 		{
 			if (g_envs[index])
-				g_envs = remove_env(index);
+				g_envs = ft_remove_env(index);
 		}
 		else
 		{
