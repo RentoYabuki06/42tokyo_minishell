@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 19:36:07 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/05 07:59:11 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 09:34:47 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_set_directory(char *path, int home)
 	return (1);  // 失敗した場合、1を返す
 }
 
-int	run_cd(char **args)
+int	ft_run_cd(char **args)
 {
 	char	*home;
 

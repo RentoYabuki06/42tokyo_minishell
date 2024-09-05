@@ -6,7 +6,7 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 19:37:14 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/05 07:58:58 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 09:34:39 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	ft_exit_atoi(const char *str)
 }
 
 
-int	fd_run_exit(char **args, t_copy copy)
+int	ft_run_exit(char **args, t_copy copy)
 {
 	size_t	i;
 

@@ -6,13 +6,13 @@
 /*   By: yabukirento <yabukirento@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 19:36:41 by yabukirento       #+#    #+#             */
-/*   Updated: 2024/09/05 08:12:11 by yabukirento      ###   ########.fr       */
+/*   Updated: 2024/09/05 09:34:53 by yabukirento      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/minishell.h"
 
-int	fd_run_echo(char **args)
+int	ft_run_echo(char **args)
 {
 	int	i;
 	int	flag;
